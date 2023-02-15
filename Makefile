@@ -63,11 +63,11 @@ pull:
 	git status
 
 # upload files to the Voting code repo
+# git add .gitignore
+# git add .gitlab-ci.yml
 push:
 	make clean
 	@echo
-	git add .gitignore
-	git add .gitlab-ci.yml
 	git add Voting.cpp
 	git add Voting.hpp
 	-git add Voting.log.txt
@@ -77,13 +77,14 @@ push:
 	git add RunVoting.cpp
 	git add RunVoting.ctd.txt
 	git add TestVoting.cpp
-	git commit -m "completing project requirements, solved issue #4, #7, #8, #10"
+	git commit -m "finished basic implementation, solved issue #3 and #4, passes test 0 of hackerrank"
 	git push
 	git status
 
 # compile run harness
 RunVoting: Voting.hpp Voting.cpp RunVoting.cpp
 	-$(CPPCHECK) Voting.cpp
+	-$(CPPCHECK) Voting.hpp
 	-$(CPPCHECK) RunVoting.cpp
 	$(CXX) $(CXXFLAGS) Voting.cpp RunVoting.cpp -o RunVoting
 

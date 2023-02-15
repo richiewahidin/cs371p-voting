@@ -6,9 +6,10 @@
 // includes
 // --------
 
-#include <cassert> // assert
-#include <algorithm>
+using namespace std;
 
 #include "Voting.hpp"
 
-using namespace std;
+
+
+
