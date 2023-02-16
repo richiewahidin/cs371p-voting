@@ -19,6 +19,7 @@ int main () {
     unsigned num_candidates;
     cin >> num_elections;
 
+    // repeat for the number of elections held
     while (num_elections--) {
 
         Election curr;
@@ -28,7 +29,9 @@ int main () {
         curr.get_names(num_candidates);
         curr.get_ballots(num_candidates);
 
+        // number of votes to be at > 50%
         const int num_votes_to_win = curr.ballots.size() / 2 + 1;
+
         bool finished = false;
 
         while (!finished) {
@@ -42,27 +45,32 @@ int main () {
 
             for (int i = 0;  i < curr.candidates.size(); i++) {
                 current = &curr.candidates[i];
+                int size = current->candidate_ballots.size();
+                assert (size <= curr.ballots.size());
 
                 // found winner
-                if (current->candidate_ballots.size() >= num_votes_to_win) {
+                if (size >= num_votes_to_win) {
                     cout << current->name << endl;
                     finished = true;
 
                 } else {
-                    if (current->candidate_ballots.size() > max) {
-                        max = current->candidate_ballots.size();
-                    } if (current->candidate_ballots.size() < min && 
-                            current->candidate_ballots.size() != 0) {
-                        min = current->candidate_ballots.size();
+                    // get max and min
+                    if (size > max) {
+                        max = size;
+                    } if (size < min && size != 0) {
+                        min = size;
                     }
                 } 
             }            
 
-            // need to go check the next preference for those who voted for the losers
             if (!finished) {
                 vector<Candidate*> losers;
                 populate_losers_list(losers, curr, min, max);
+
+                // check tie after losers are appropriately updated
                 finished = check_tie(curr, min, max);
+
+                // shift the current index of ballots for the losers
                 shift_current_index(losers, curr);
             }
         }

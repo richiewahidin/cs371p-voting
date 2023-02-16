@@ -22,6 +22,7 @@ void clear_ballot (Election& curr) {
 void count_votes(Election& curr) {
     Candidate* current;
     Ballot* temp;
+
     for (int i = 0; i < curr.ballots.size(); i++) {
         temp = &curr.ballots[i];
         current = &curr.candidates[temp->preferences[temp->current_index] - 1];
@@ -34,6 +35,8 @@ void count_votes(Election& curr) {
 void populate_losers_list(vector<Candidate*>& losers, Election& curr, int min, 
         int max) {
     for (int i = 0; i < curr.candidates.size(); i++) {
+
+        // if min == max, means its a draw, don't want to add those to losers
         if (min != max && curr.candidates[i].candidate_ballots.size() == min 
                 || curr.candidates[i].candidate_ballots.size() == 0) {
             losers.push_back(&curr.candidates[i]);
@@ -61,6 +64,9 @@ void shift_current_index(vector<Candidate*>& losers, Election& curr) {
         Candidate* current = losers[i];
         for (int i = 0; i < current->candidate_ballots.size(); i++) {
             Ballot* temp = current->candidate_ballots[i];
+
+            // do in a while loop to ensure that current_index points to an 
+            // eligible candidate
             while (curr.candidates[temp->preferences[temp->current_index] - 1].out) {
                 temp->current_index++;
             } 
