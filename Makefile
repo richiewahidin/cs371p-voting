@@ -77,7 +77,7 @@ push:
 	git add RunVoting.cpp
 	git add RunVoting.ctd.txt
 	git add TestVoting.cpp
-	git commit -m "finished basic implementation, solved issue #3 and #4, passes test 0 of hackerrank"
+	git commit -m "finished optimized solution, failing some tests. solved issues #5 and #14"
 	git push
 	git status
 
@@ -128,7 +128,7 @@ ctd-generate:
 
 # execute the run harness against your test files in the Voting test repo and diff with the expected output
 run: ../cs371p-Voting-tests
-	-make ../cs371p-Voting-tests/richiewahidin-RunVoting # change gpdowning to your GitLab-ID
+	-make ../cs371p-Voting-tests/Zuriel-Martes-RunVoting # change gpdowning to your GitLab-ID
 
 # execute the run harness against all of the test files in the Voting test repo and diff with the expected output
 run-all: ../cs371p-Voting-tests

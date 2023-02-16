@@ -1,0 +1,24 @@
+INT(1, 100, t) 
+NEWLINE
+## Loop for each test case
+REP(t)
+    NEWLINE
+    # Store candidate count in n
+    INT(1, 20, n) NEWLINE
+    # Loop to check candidate names
+    REP(n)
+        REGEX("[^\n]{1,80}") NEWLINE
+    END
+    #loop over ballots
+    WHILEI(b, !(MATCH("\n") || ISEOF) )
+        ASSERT(b < 1000)
+        #loop over a ballots entries
+        REPI(i, n, SPACE)
+            INT(1, n, array[i])
+        END
+        ASSERT(UNIQUE(array))
+        UNSET(array)
+        ASSERT(!ISEOF) 
+        NEWLINE
+    END
+END

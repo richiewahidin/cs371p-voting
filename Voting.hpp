@@ -13,19 +13,7 @@
 #ifndef Voting_hpp
 #define Voting_hpp
 
-using std::vector;
-using std::string;
-
-class Candidate {
-    public:
-        string name;
-        int num_votes;
-
-        Candidate(string candidate_name) {
-            this->name = candidate_name;
-            this->num_votes = 0;
-        }
-};
+using namespace std;
 
 class Ballot {
     public: 
@@ -34,6 +22,18 @@ class Ballot {
 
         Ballot() {
             this->current_index = 0;
+        }
+};
+
+class Candidate {
+    public:
+        string name;
+        vector<Ballot*> candidate_ballots;
+        bool out;
+
+        Candidate(string candidate_name) {
+            this->name = candidate_name;
+            this->out = false;
         }
 };
 
@@ -67,6 +67,11 @@ class Election {
             return;
         }   
 };
-
+void clear_ballot (Election& curr);
+void count_votes (Election& curr);
+void populate_losers_list (vector<Candidate*>& losers, Election& curr, int min, 
+        int max);
+bool check_tie( Election& curr, int min, int max);
+void shift_current_index(vector<Candidate*>& losers, Election& curr); 
 
 #endif
