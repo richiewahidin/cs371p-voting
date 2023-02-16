@@ -34,7 +34,7 @@ void count_votes(Election& curr) {
 void populate_losers_list(vector<Candidate*>& losers, Election& curr, int min, 
         int max) {
     for (int i = 0; i < curr.candidates.size(); i++) {
-        if (curr.candidates[i].candidate_ballots.size() == min 
+        if (min != max && curr.candidates[i].candidate_ballots.size() == min 
                 || curr.candidates[i].candidate_ballots.size() == 0) {
             losers.push_back(&curr.candidates[i]);
             curr.candidates[i].out = true;
@@ -61,7 +61,9 @@ void shift_current_index(vector<Candidate*>& losers, Election& curr) {
         Candidate* current = losers[i];
         for (int i = 0; i < current->candidate_ballots.size(); i++) {
             Ballot* temp = current->candidate_ballots[i];
-            temp->current_index++; 
+            while (curr.candidates[temp->preferences[temp->current_index] - 1].out) {
+                temp->current_index++;
+            } 
         }   
     }
 }

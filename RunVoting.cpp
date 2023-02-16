@@ -56,14 +56,13 @@ int main () {
                         min = current->candidate_ballots.size();
                     }
                 } 
-            }                
-            
-            finished = check_tie(curr, min, max);
+            }            
 
             // need to go check the next preference for those who voted for the losers
             if (!finished) {
                 vector<Candidate*> losers;
                 populate_losers_list(losers, curr, min, max);
+                finished = check_tie(curr, min, max);
                 shift_current_index(losers, curr);
             }
         }
