@@ -1,3 +1,21 @@
+commit 22b40637d507ba3c5ef6cd3e54086415f7e1fc64
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Feb 16 23:22:04 2023 -0600
+
+    added .gitlab-ci.yml
+
+commit b5ddd69833c4a90b2ecb9221e9996a7100a9fe1f
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Feb 16 23:20:38 2023 -0600
+
+    added .gitignore and gitlab-ci.yml
+
+commit a4d8e2f2d0fc85d9baf149fc052a1db58859ac07
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Feb 16 23:05:28 2023 -0600
+
+    finished everything. Solved issue #2, #6, #7, #8
+
 commit 49cea6cd165962267b22b7b9ad546c9574022d89
 Author: Richie Wahidin <richie@cs.utexas.edu>
 Date:   Thu Feb 16 23:00:31 2023 -0600

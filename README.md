@@ -8,7 +8,7 @@
 
 * HackerRank ID: richiewahidin
 
-* Git SHA: 49cea6cd165962267b22b7b9ad546c9574022d89
+* Git SHA: 22b40637d507ba3c5ef6cd3e54086415f7e1fc64
 
 * GitLab Pipelines: https://gitlab.com/richiewahidin/cs371p-voting/-/pipelines
 
