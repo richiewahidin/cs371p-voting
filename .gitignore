@@ -1,0 +1,10 @@
+.DS_Store
+*.gcda
+*.gcno
+*.tmp.txt
+cs371p-voting.bbprojectd
+Doxyfile
+latex
+RunVoting
+TestVoting
+
