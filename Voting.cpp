@@ -31,8 +31,39 @@ void count_votes(Election& curr) {
     return;
 }
 
+// check for winner and also getting min and max number of votes
+bool check_winner (Election& curr, int* max_min) {
+    Candidate* current;
+
+    // number of votes to be at > 50%
+    const int num_votes_to_win = curr.ballots.size() / 2 + 1;
+
+    for (int i = 0;  i < curr.candidates.size(); i++) {
+        current = &curr.candidates[i];
+        int size = current->candidate_ballots.size();
+        assert (size <= curr.ballots.size());
+
+        // found winner
+        if (size >= num_votes_to_win) {
+            cout << current->name << endl;
+            return true;
+
+        } else {
+            // get max and min
+            if (size > max_min[0]) {
+                max_min[0] = size;
+            } if (size < max_min[1] && size != 0) {
+                max_min[1] = size;
+            }
+        } 
+    }
+
+    return false;     
+}
+
+
 // populate the losers list with the losers
-void populate_losers_list(vector<Candidate*>& losers, Election& curr, int min, 
+int populate_losers_list(vector<Candidate*>& losers, Election& curr, int min, 
         int max) {
     for (int i = 0; i < curr.candidates.size(); i++) {
 
@@ -43,6 +74,7 @@ void populate_losers_list(vector<Candidate*>& losers, Election& curr, int min,
             curr.candidates[i].out = true;
         }
     }
+    return losers.size();
 }
 
 // return true if tie and print candidate names, return false otherwise

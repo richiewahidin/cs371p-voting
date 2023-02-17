@@ -69,7 +69,8 @@ class Election {
 };
 void clear_ballot (Election& curr);
 void count_votes (Election& curr);
-void populate_losers_list (vector<Candidate*>& losers, Election& curr, int min, 
+bool check_winner (Election& curr, int* max_min);
+int populate_losers_list (vector<Candidate*>& losers, Election& curr, int min, 
         int max);
 bool check_tie( Election& curr, int min, int max);
 void shift_current_index(vector<Candidate*>& losers, Election& curr); 

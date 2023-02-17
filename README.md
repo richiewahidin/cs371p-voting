@@ -14,6 +14,6 @@
 
 * Estimated completion time: 5.0
 
-* Actual completion time: 
+* Actual completion time: 8.0
 
 * Comments: (any additional comments you have)

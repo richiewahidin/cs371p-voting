@@ -29,9 +29,6 @@ int main () {
         curr.get_names(num_candidates);
         curr.get_ballots(num_candidates);
 
-        // number of votes to be at > 50%
-        const int num_votes_to_win = curr.ballots.size() / 2 + 1;
-
         bool finished = false;
 
         while (!finished) {
@@ -39,30 +36,13 @@ int main () {
             clear_ballot(curr);
             count_votes(curr);
 
-            int max = 0;
-            int min = 1000;
-            Candidate* current;
+            // max and min number of votes by all the candidates (excluding zero)
+            int max_min[2] = {0, 1000};
+            int& max = max_min[0];
+            int& min = max_min[1];
 
-            for (int i = 0;  i < curr.candidates.size(); i++) {
-                current = &curr.candidates[i];
-                int size = current->candidate_ballots.size();
-                assert (size <= curr.ballots.size());
-
-                // found winner
-                if (size >= num_votes_to_win) {
-                    cout << current->name << endl;
-                    finished = true;
-
-                } else {
-                    // get max and min
-                    if (size > max) {
-                        max = size;
-                    } if (size < min && size != 0) {
-                        min = size;
-                    }
-                } 
-            }            
-
+            finished = check_winner(curr, max_min);
+                
             if (!finished) {
                 vector<Candidate*> losers;
                 populate_losers_list(losers, curr, min, max);

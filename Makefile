@@ -5,6 +5,7 @@ CHECKTESTDATA := checktestdata
 CPPCHECK      := cppcheck
 DOXYGEN       := doxygen
 SHELL         := bash
+VALGRIND      := valgrind
 
 ifeq ($(shell uname -s), Darwin)
     BOOST    := /usr/local/include/boost
@@ -14,7 +15,7 @@ ifeq ($(shell uname -s), Darwin)
     GTEST    := /usr/local/include/gtest
     LDFLAGS  := -lgtest -lgtest_main
     LIB      := /usr/local/lib
-    VALGRIND :=
+    VALGRIND := valgrind
 else ifeq ($(shell uname -p), unknown)
     BOOST    := /usr/include/boost
     CXX      := g++
@@ -77,7 +78,7 @@ push:
 	git add RunVoting.cpp
 	git add RunVoting.ctd.txt
 	git add TestVoting.cpp
-	git commit -m "fixed all bugs, passing all tests now. Solved issue #15, #16, #17"
+	git commit -m "refactored some things, finished test cases. Solved issues #9 and #13"
 	git push
 	git status
 
@@ -107,31 +108,35 @@ test: TestVoting
 	$(VALGRIND) ./TestVoting
 ifeq ($(shell uname -s), Darwin)
 	$(GCOV) TestVoting.cpp | grep -B 2 "cpp.gcov"
+else
+	gcc -c --coverage Voting.cpp
+	$(GCOV) -b TestVoting-Voting.cpp | grep -B 4 "cpp.gcov"
+
 endif
 
 # clone the Voting test repo
-../cs371p-Voting-tests:
-	git clone https://gitlab.com/gpdowning/cs371p-Voting-tests.git ../cs371p-Voting-tests
+../cs371p-voting-tests:
+	git clone https://gitlab.com/gpdowning/cs371p-voting-tests.git ../cs371p-voting-tests
 
 # test files in the Voting test repo
-T_FILES := `ls ../cs371p-Voting-tests/*.in.txt`
+T_FILES := `ls ../cs371p-voting-tests/*.in.txt`
 
 # generate a random input file
 ctd-generate:
 	for v in {1..200}; do $(CHECKTESTDATA) -g RunVoting.ctd.txt >> RunVoting.gen.txt; done
 
 # execute the run harness against a test file in the Voting test repo and diff with the expected output
-../cs371p-Voting-tests/%: RunVoting
+../cs371p-voting-tests/%: RunVoting
 	$(CHECKTESTDATA) RunVoting.ctd.txt $@.in.txt
 	./RunVoting < $@.in.txt > RunVoting.tmp.txt
 	diff RunVoting.tmp.txt $@.out.txt
 
 # execute the run harness against your test files in the Voting test repo and diff with the expected output
-run: ../cs371p-Voting-tests
-	-make ../cs371p-Voting-tests/Zuriel-Martes-RunVoting # change gpdowning to your GitLab-ID
+run: ../cs371p-voting-tests
+	-make ../cs371p-voting-tests/richiewahidin-RunVoting # change gpdowning to your GitLab-ID
 
 # execute the run harness against all of the test files in the Voting test repo and diff with the expected output
-run-all: ../cs371p-Voting-tests
+run-all: ../cs371p-voting-tests
 	-for v in $(T_FILES); do make $${v/.in.txt/}; done
 
 # auto format the code
