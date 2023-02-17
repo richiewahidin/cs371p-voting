@@ -52,24 +52,23 @@ bool check_winner (Election& curr, int* max_min) {
             // get max and min
             if (size > max_min[0]) {
                 max_min[0] = size;
-            }
-            if (size < max_min[1] && size != 0) {
+            } if (size < max_min[1] && size != 0) {
                 max_min[1] = size;
             }
-        }
+        } 
     }
 
-    return false;
+    return false;     
 }
 
 
 // populate the losers list with the losers
-int populate_losers_list(vector<Candidate*>& losers, Election& curr, int min,
-                         int max) {
+int populate_losers_list(vector<Candidate*>& losers, Election& curr, int min, 
+        int max) {
     for (int i = 0; i < curr.candidates.size(); i++) {
 
         // if min == max, means its a draw, don't want to add those to losers
-        if (min != max && curr.candidates[i].candidate_ballots.size() == min
+        if (min != max && curr.candidates[i].candidate_ballots.size() == min 
                 || curr.candidates[i].candidate_ballots.size() == 0) {
             losers.push_back(&curr.candidates[i]);
             curr.candidates[i].out = true;
@@ -81,9 +80,9 @@ int populate_losers_list(vector<Candidate*>& losers, Election& curr, int min,
 // return true if tie and print candidate names, return false otherwise
 bool check_tie( Election& curr, int min, int max) {
     if (max == min) {
-        for (int i = 0; i < curr.candidates.size(); i++) {
-            if (!curr.candidates[i].out) {
-                cout << curr.candidates[i].name << endl;
+            for (int i = 0; i < curr.candidates.size(); i++) {
+                if (!curr.candidates[i].out) {
+                cout << curr.candidates[i].name << endl;   
             }
         }
         return true;
@@ -98,12 +97,12 @@ void shift_current_index(vector<Candidate*>& losers, Election& curr) {
         for (int i = 0; i < current->candidate_ballots.size(); i++) {
             Ballot* temp = current->candidate_ballots[i];
 
-            // do in a while loop to ensure that current_index points to an
+            // do in a while loop to ensure that current_index points to an 
             // eligible candidate
             while (curr.candidates[temp->preferences[temp->current_index] - 1].out) {
                 temp->current_index++;
-            }
-        }
+            } 
+        }   
     }
 }
 

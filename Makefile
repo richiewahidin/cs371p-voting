@@ -78,6 +78,7 @@ push:
 	git add RunVoting.cpp
 	git add RunVoting.ctd.txt
 	git add TestVoting.cpp
+	git add test.txt
 	git commit -m "refactored some things, finished test cases. Solved issues #9 and #13"
 	git push
 	git status

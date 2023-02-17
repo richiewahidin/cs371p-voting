@@ -32,7 +32,7 @@ int main () {
         bool finished = false;
 
         while (!finished) {
-
+            
             clear_ballot(curr);
             count_votes(curr);
 
@@ -42,7 +42,7 @@ int main () {
             int& min = max_min[1];
 
             finished = check_winner(curr, max_min);
-
+                
             if (!finished) {
                 vector<Candidate*> losers;
                 populate_losers_list(losers, curr, min, max);

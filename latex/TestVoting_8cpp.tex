@@ -1,0 +1,219 @@
+\hypertarget{TestVoting_8cpp}{}\section{Test\+Voting.\+cpp File Reference}
+\label{TestVoting_8cpp}\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Voting.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Test\+Voting.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TestVoting_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TestVoting_8cpp_a6ff54ac96a3b4048a8d6d63a425e08a5}{T\+E\+ST} (Voting\+Fixture, get\+\_\+names\+\_\+0)
+\item 
+\hyperlink{TestVoting_8cpp_a5d76a6425a75e8c5786c8ebb0e6d4fc3}{T\+E\+ST} (Voting\+Fixture, get\+\_\+names\+\_\+1)
+\item 
+\hyperlink{TestVoting_8cpp_a903d6a7f2d4a87a8a7649e47d6d96cb6}{T\+E\+ST} (Voting\+Fixture, get\+\_\+ballots\+\_\+0)
+\item 
+\hyperlink{TestVoting_8cpp_a0a3504b7a4ef074a39843219fc42965e}{T\+E\+ST} (Voting\+Fixture, get\+\_\+ballots\+\_\+1)
+\item 
+\hyperlink{TestVoting_8cpp_a17ec774108c41a4423612bf98fc97c5d}{T\+E\+ST} (Voting\+Fixture, get\+\_\+ballots\+\_\+2)
+\item 
+\hyperlink{TestVoting_8cpp_a4244e52635a401104101130f38242e7a}{T\+E\+ST} (Voting\+Fixture, clear\+\_\+ballots\+\_\+0)
+\item 
+\hyperlink{TestVoting_8cpp_a44235ea111b1b9fda622e492519ba838}{T\+E\+ST} (Voting\+Fixture, count\+\_\+votes\+\_\+0)
+\item 
+\hyperlink{TestVoting_8cpp_af9a3f0a9099ae4ca3750b2fb22e25910}{T\+E\+ST} (Voting\+Fixture, count\+\_\+votes\+\_\+1)
+\item 
+\hyperlink{TestVoting_8cpp_a577d703ddf7981f918e2e53c92d8b396}{T\+E\+ST} (Voting\+Fixture, count\+\_\+votes\+\_\+2)
+\item 
+\hyperlink{TestVoting_8cpp_af5fafb92c7acf91c3387e0fb8747b26b}{T\+E\+ST} (Voting\+Fixture, check\+\_\+winner\+\_\+0)
+\item 
+\hyperlink{TestVoting_8cpp_ae2ea070175c87f1d1c0fc05b61fec858}{T\+E\+ST} (Voting\+Fixture, check\+\_\+winner\+\_\+1)
+\item 
+\hyperlink{TestVoting_8cpp_a3a99f6d9a5202357fa198f553e0559dd}{T\+E\+ST} (Voting\+Fixture, check\+\_\+winner\+\_\+2)
+\item 
+\hyperlink{TestVoting_8cpp_a0d311fcd42f3f41bdf982f359e790c7e}{T\+E\+ST} (Voting\+Fixture, populate\+\_\+losers\+\_\+list\+\_\+0)
+\item 
+\hyperlink{TestVoting_8cpp_a11e4a1929f2674935324972fc18c529b}{T\+E\+ST} (Voting\+Fixture, populate\+\_\+losers\+\_\+list\+\_\+1)
+\item 
+\hyperlink{TestVoting_8cpp_a9105984ce9b484366bcf4207795a8856}{T\+E\+ST} (Voting\+Fixture, populate\+\_\+losers\+\_\+list\+\_\+2)
+\item 
+\hyperlink{TestVoting_8cpp_a1f3212efcefdf67034d6c66e0da45a48}{T\+E\+ST} (Voting\+Fixture, check\+\_\+tie\+\_\+0)
+\item 
+\hyperlink{TestVoting_8cpp_a857b0f25953ef989604fce22915a19b8}{T\+E\+ST} (Voting\+Fixture, shift\+\_\+current\+\_\+index\+\_\+0)
+\item 
+\hyperlink{TestVoting_8cpp_a3e14f81db4c23796120ce138083eaa3a}{T\+E\+ST} (Voting\+Fixture, shift\+\_\+current\+\_\+index\+\_\+1)
+\item 
+\hyperlink{TestVoting_8cpp_a40d069849058f155c59cffe98a81cb52}{T\+E\+ST} (Voting\+Fixture, count\+\_\+votes\+\_\+3)
+\item 
+\hyperlink{TestVoting_8cpp_aefa4f6b0d949c09e4f0a4fbe1acd967b}{T\+E\+ST} (Voting\+Fixture, check\+\_\+tie\+\_\+1)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classElection}{Election} \hyperlink{TestVoting_8cpp_ae7297f8a0453f590208cc7ba62608e67}{test1}
+\item 
+int \hyperlink{TestVoting_8cpp_a9639bb6e6d8e5578fe4512db9274be89}{num\+\_\+candidates}
+\item 
+int \hyperlink{TestVoting_8cpp_af6f058c9033ccd8c57d2a83b07a832b0}{max\+\_\+min} \mbox{[}2\mbox{]} = \{0, 1000\}
+\item 
+vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$ $>$ \hyperlink{TestVoting_8cpp_a44fe66ac12d1911d6b212fa4940fe519}{losers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{TestVoting_8cpp_a6ff54ac96a3b4048a8d6d63a425e08a5}\label{TestVoting_8cpp_a6ff54ac96a3b4048a8d6d63a425e08a5}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{get\+\_\+names\+\_\+0}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a5d76a6425a75e8c5786c8ebb0e6d4fc3}\label{TestVoting_8cpp_a5d76a6425a75e8c5786c8ebb0e6d4fc3}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{get\+\_\+names\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a903d6a7f2d4a87a8a7649e47d6d96cb6}\label{TestVoting_8cpp_a903d6a7f2d4a87a8a7649e47d6d96cb6}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{get\+\_\+ballots\+\_\+0}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a0a3504b7a4ef074a39843219fc42965e}\label{TestVoting_8cpp_a0a3504b7a4ef074a39843219fc42965e}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{get\+\_\+ballots\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a17ec774108c41a4423612bf98fc97c5d}\label{TestVoting_8cpp_a17ec774108c41a4423612bf98fc97c5d}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{get\+\_\+ballots\+\_\+2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a4244e52635a401104101130f38242e7a}\label{TestVoting_8cpp_a4244e52635a401104101130f38242e7a}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{clear\+\_\+ballots\+\_\+0}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a44235ea111b1b9fda622e492519ba838}\label{TestVoting_8cpp_a44235ea111b1b9fda622e492519ba838}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{count\+\_\+votes\+\_\+0}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_af9a3f0a9099ae4ca3750b2fb22e25910}\label{TestVoting_8cpp_af9a3f0a9099ae4ca3750b2fb22e25910}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{count\+\_\+votes\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a577d703ddf7981f918e2e53c92d8b396}\label{TestVoting_8cpp_a577d703ddf7981f918e2e53c92d8b396}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{count\+\_\+votes\+\_\+2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_af5fafb92c7acf91c3387e0fb8747b26b}\label{TestVoting_8cpp_af5fafb92c7acf91c3387e0fb8747b26b}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{check\+\_\+winner\+\_\+0}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_ae2ea070175c87f1d1c0fc05b61fec858}\label{TestVoting_8cpp_ae2ea070175c87f1d1c0fc05b61fec858}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{check\+\_\+winner\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a3a99f6d9a5202357fa198f553e0559dd}\label{TestVoting_8cpp_a3a99f6d9a5202357fa198f553e0559dd}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{check\+\_\+winner\+\_\+2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a0d311fcd42f3f41bdf982f359e790c7e}\label{TestVoting_8cpp_a0d311fcd42f3f41bdf982f359e790c7e}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{populate\+\_\+losers\+\_\+list\+\_\+0}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a11e4a1929f2674935324972fc18c529b}\label{TestVoting_8cpp_a11e4a1929f2674935324972fc18c529b}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{populate\+\_\+losers\+\_\+list\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a9105984ce9b484366bcf4207795a8856}\label{TestVoting_8cpp_a9105984ce9b484366bcf4207795a8856}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{populate\+\_\+losers\+\_\+list\+\_\+2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a1f3212efcefdf67034d6c66e0da45a48}\label{TestVoting_8cpp_a1f3212efcefdf67034d6c66e0da45a48}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{check\+\_\+tie\+\_\+0}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a857b0f25953ef989604fce22915a19b8}\label{TestVoting_8cpp_a857b0f25953ef989604fce22915a19b8}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [17/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{shift\+\_\+current\+\_\+index\+\_\+0}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a3e14f81db4c23796120ce138083eaa3a}\label{TestVoting_8cpp_a3e14f81db4c23796120ce138083eaa3a}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [18/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{shift\+\_\+current\+\_\+index\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a40d069849058f155c59cffe98a81cb52}\label{TestVoting_8cpp_a40d069849058f155c59cffe98a81cb52}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [19/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{count\+\_\+votes\+\_\+3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TestVoting_8cpp_aefa4f6b0d949c09e4f0a4fbe1acd967b}\label{TestVoting_8cpp_aefa4f6b0d949c09e4f0a4fbe1acd967b}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [20/20]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Voting\+Fixture}]{,  }\item[{check\+\_\+tie\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{TestVoting_8cpp_a44fe66ac12d1911d6b212fa4940fe519}\label{TestVoting_8cpp_a44fe66ac12d1911d6b212fa4940fe519}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!losers@{losers}}
+\index{losers@{losers}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{losers}{losers}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classCandidate}{Candidate}$\ast$$>$ losers}
+
+\mbox{\Hypertarget{TestVoting_8cpp_af6f058c9033ccd8c57d2a83b07a832b0}\label{TestVoting_8cpp_af6f058c9033ccd8c57d2a83b07a832b0}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!max\+\_\+min@{max\+\_\+min}}
+\index{max\+\_\+min@{max\+\_\+min}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{max\+\_\+min}{max\_min}}
+{\footnotesize\ttfamily int max\+\_\+min\mbox{[}2\mbox{]} = \{0, 1000\}}
+
+\mbox{\Hypertarget{TestVoting_8cpp_a9639bb6e6d8e5578fe4512db9274be89}\label{TestVoting_8cpp_a9639bb6e6d8e5578fe4512db9274be89}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!num\+\_\+candidates@{num\+\_\+candidates}}
+\index{num\+\_\+candidates@{num\+\_\+candidates}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{num\+\_\+candidates}{num\_candidates}}
+{\footnotesize\ttfamily int num\+\_\+candidates}
+
+\mbox{\Hypertarget{TestVoting_8cpp_ae7297f8a0453f590208cc7ba62608e67}\label{TestVoting_8cpp_ae7297f8a0453f590208cc7ba62608e67}} 
+\index{Test\+Voting.\+cpp@{Test\+Voting.\+cpp}!test1@{test1}}
+\index{test1@{test1}!Test\+Voting.\+cpp@{Test\+Voting.\+cpp}}
+\subsubsection{\texorpdfstring{test1}{test1}}
+{\footnotesize\ttfamily \hyperlink{classElection}{Election} test1}
+

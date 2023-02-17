@@ -1,0 +1,65 @@
+\hypertarget{Voting_8cpp}{}\section{Voting.\+cpp File Reference}
+\label{Voting_8cpp}\index{Voting.\+cpp@{Voting.\+cpp}}
+{\ttfamily \#include \char`\"{}Voting.\+hpp\char`\"{}}\newline
+Include dependency graph for Voting.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Voting_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Voting_8cpp_a8cf98cb49b50a91fd39add12659666fb}{clear\+\_\+ballot} (\hyperlink{classElection}{Election} \&curr)
+\item 
+void \hyperlink{Voting_8cpp_aebcb8ff64b9f4ff849596b6823413204}{count\+\_\+votes} (\hyperlink{classElection}{Election} \&curr)
+\item 
+bool \hyperlink{Voting_8cpp_a89e95e187282baf62f86bb0a2b359b22}{check\+\_\+winner} (\hyperlink{classElection}{Election} \&curr, int $\ast$\hyperlink{TestVoting_8cpp_af6f058c9033ccd8c57d2a83b07a832b0}{max\+\_\+min})
+\item 
+int \hyperlink{Voting_8cpp_a85e21c43caba541a3d78f283e2bab80c}{populate\+\_\+losers\+\_\+list} (vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$$>$ \&\hyperlink{TestVoting_8cpp_a44fe66ac12d1911d6b212fa4940fe519}{losers}, \hyperlink{classElection}{Election} \&curr, int min, int max)
+\item 
+bool \hyperlink{Voting_8cpp_a5b9852e016d621363181aa64c5743d18}{check\+\_\+tie} (\hyperlink{classElection}{Election} \&curr, int min, int max)
+\item 
+void \hyperlink{Voting_8cpp_add46fc452e7d67c8f4a4713d777efcd8}{shift\+\_\+current\+\_\+index} (vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$$>$ \&\hyperlink{TestVoting_8cpp_a44fe66ac12d1911d6b212fa4940fe519}{losers}, \hyperlink{classElection}{Election} \&curr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Voting_8cpp_a5b9852e016d621363181aa64c5743d18}\label{Voting_8cpp_a5b9852e016d621363181aa64c5743d18}} 
+\index{Voting.\+cpp@{Voting.\+cpp}!check\+\_\+tie@{check\+\_\+tie}}
+\index{check\+\_\+tie@{check\+\_\+tie}!Voting.\+cpp@{Voting.\+cpp}}
+\subsubsection{\texorpdfstring{check\+\_\+tie()}{check\_tie()}}
+{\footnotesize\ttfamily bool check\+\_\+tie (\begin{DoxyParamCaption}\item[{\hyperlink{classElection}{Election} \&}]{curr,  }\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Voting_8cpp_a89e95e187282baf62f86bb0a2b359b22}\label{Voting_8cpp_a89e95e187282baf62f86bb0a2b359b22}} 
+\index{Voting.\+cpp@{Voting.\+cpp}!check\+\_\+winner@{check\+\_\+winner}}
+\index{check\+\_\+winner@{check\+\_\+winner}!Voting.\+cpp@{Voting.\+cpp}}
+\subsubsection{\texorpdfstring{check\+\_\+winner()}{check\_winner()}}
+{\footnotesize\ttfamily bool check\+\_\+winner (\begin{DoxyParamCaption}\item[{\hyperlink{classElection}{Election} \&}]{curr,  }\item[{int $\ast$}]{max\+\_\+min }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Voting_8cpp_a8cf98cb49b50a91fd39add12659666fb}\label{Voting_8cpp_a8cf98cb49b50a91fd39add12659666fb}} 
+\index{Voting.\+cpp@{Voting.\+cpp}!clear\+\_\+ballot@{clear\+\_\+ballot}}
+\index{clear\+\_\+ballot@{clear\+\_\+ballot}!Voting.\+cpp@{Voting.\+cpp}}
+\subsubsection{\texorpdfstring{clear\+\_\+ballot()}{clear\_ballot()}}
+{\footnotesize\ttfamily void clear\+\_\+ballot (\begin{DoxyParamCaption}\item[{\hyperlink{classElection}{Election} \&}]{curr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Voting_8cpp_aebcb8ff64b9f4ff849596b6823413204}\label{Voting_8cpp_aebcb8ff64b9f4ff849596b6823413204}} 
+\index{Voting.\+cpp@{Voting.\+cpp}!count\+\_\+votes@{count\+\_\+votes}}
+\index{count\+\_\+votes@{count\+\_\+votes}!Voting.\+cpp@{Voting.\+cpp}}
+\subsubsection{\texorpdfstring{count\+\_\+votes()}{count\_votes()}}
+{\footnotesize\ttfamily void count\+\_\+votes (\begin{DoxyParamCaption}\item[{\hyperlink{classElection}{Election} \&}]{curr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Voting_8cpp_a85e21c43caba541a3d78f283e2bab80c}\label{Voting_8cpp_a85e21c43caba541a3d78f283e2bab80c}} 
+\index{Voting.\+cpp@{Voting.\+cpp}!populate\+\_\+losers\+\_\+list@{populate\+\_\+losers\+\_\+list}}
+\index{populate\+\_\+losers\+\_\+list@{populate\+\_\+losers\+\_\+list}!Voting.\+cpp@{Voting.\+cpp}}
+\subsubsection{\texorpdfstring{populate\+\_\+losers\+\_\+list()}{populate\_losers\_list()}}
+{\footnotesize\ttfamily int populate\+\_\+losers\+\_\+list (\begin{DoxyParamCaption}\item[{vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$$>$ \&}]{losers,  }\item[{\hyperlink{classElection}{Election} \&}]{curr,  }\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Voting_8cpp_add46fc452e7d67c8f4a4713d777efcd8}\label{Voting_8cpp_add46fc452e7d67c8f4a4713d777efcd8}} 
+\index{Voting.\+cpp@{Voting.\+cpp}!shift\+\_\+current\+\_\+index@{shift\+\_\+current\+\_\+index}}
+\index{shift\+\_\+current\+\_\+index@{shift\+\_\+current\+\_\+index}!Voting.\+cpp@{Voting.\+cpp}}
+\subsubsection{\texorpdfstring{shift\+\_\+current\+\_\+index()}{shift\_current\_index()}}
+{\footnotesize\ttfamily void shift\+\_\+current\+\_\+index (\begin{DoxyParamCaption}\item[{vector$<$ \hyperlink{classCandidate}{Candidate} $\ast$$>$ \&}]{losers,  }\item[{\hyperlink{classElection}{Election} \&}]{curr }\end{DoxyParamCaption})}
+

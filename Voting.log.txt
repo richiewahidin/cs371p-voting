@@ -1,0 +1,47 @@
+commit 49cea6cd165962267b22b7b9ad546c9574022d89
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Feb 16 23:00:31 2023 -0600
+
+    added missing files
+
+commit f68b597227928f00442ecab75b8d8c190be52716
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Feb 16 22:59:24 2023 -0600
+
+    refactored some things, finished test cases. Solved issues #9 and #13
+
+commit cff6f7e1af16edf0a5195f9426a03b4207bada55
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Feb 16 00:17:29 2023 -0600
+
+    fixed all bugs, passing all tests now. Solved issue #15, #16, #17
+
+commit 68c6f3750fda1e73df83ee1449369a4fd979122b
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Wed Feb 15 23:51:23 2023 -0600
+
+    fixed all bugs, passing all tests now. Solved issue #15, #16, #17
+
+commit 921215a3a5117e579c9f749a0197755102592a27
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Wed Feb 15 23:47:18 2023 -0600
+
+    finished optimized solution, failing some tests. solved issues #5 and #14
+
+commit 7587b693feeb2dfd078b61a99d525eea1653826d
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Wed Feb 15 17:01:40 2023 -0600
+
+    finished basic implementation, solved issue #3 and #4, passes test 0 of hackerrank
+
+commit 7f4300dbf4a82f77b3d58d0bdd1801b2d9b49cf0
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Wed Feb 8 16:56:16 2023 -0600
+
+    Created necessary files, solved issue #1
+
+commit 419e8d6510b904c4f88fce51b874a7d96bb91687
+Author: Richie A Wahidin <richiewahidin@utexas.edu>
+Date:   Wed Feb 8 22:12:23 2023 +0000
+
+    Initial commit
