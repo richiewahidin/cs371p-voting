@@ -25,15 +25,15 @@ else ifeq ($(shell uname -p), unknown)
     LDFLAGS  := -lgtest -lgtest_main -pthread
     LIB      := /usr/lib
 	VALGRIND := valgrind	
-else ifeq ($(shell uname -s), Linux)	
-    BOOST    := /usr/include/boost	
-    CXX      := g++	
-    CXXFLAGS := --coverage -g -std=c++20 -Wall -Wextra -Wpedantic	
-    GCOV     := gcov	
-    GTEST    := /usr/include/gtest	
-    LDFLAGS  := -lgtest -lgtest_main -pthread	
+else ifeq ($(shell uname -p), Linux)
+    BOOST    := /usr/include/boost
+    CXX      := g++
+    CXXFLAGS := --coverage -g -std=c++20 -Wall -Wextra -Wpedantic
+    GCOV     := gcov
+    GTEST    := /usr/include/gtest
+    LDFLAGS  := -lgtest -lgtest_main -pthread
     LIB      := /usr/lib/x86_64-linux-gnu
-    VALGRIND := valgrind
+	VALGRIND := valgrind
 else
     BOOST    := /usr/local/opt/boost-1.67/include/boost
     CXX      := g++-11

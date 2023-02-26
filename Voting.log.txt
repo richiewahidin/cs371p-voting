@@ -1,3 +1,21 @@
+commit d9365ef835af2436d788391c4aef6dde9d52d264
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Sat Feb 25 21:30:55 2023 -0600
+
+    changed makefile
+
+commit 0c179cc00f9f95c9b1dbde695c471af6d30684dc
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Sat Feb 25 21:20:02 2023 -0600
+
+    cleaned up repo
+
+commit f388fcb193e9abf2409e44f667bcc1dbb352fd6c
+Author: Richie Wahidin <richie@cs.utexas.edu>
+Date:   Thu Feb 16 23:31:31 2023 -0600
+
+    updated git log
+
 commit 22b40637d507ba3c5ef6cd3e54086415f7e1fc64
 Author: Richie Wahidin <richie@cs.utexas.edu>
 Date:   Thu Feb 16 23:22:04 2023 -0600
